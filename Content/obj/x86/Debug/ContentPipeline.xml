@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>Textures\block.png</Source>
+      <Name>Textures\block</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jerico\Documents\Visual Studio 2010\Projects\LevelGame_after2\LevelGame\bin\x86\Debug\Content\Textures\block.xnb</Output>
+      <Time>2014-04-16T22:00:38.4059514+06:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\block2.png</Source>
+      <Name>Textures\block2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jerico\Documents\Visual Studio 2010\Projects\LevelGame_after2\LevelGame\bin\x86\Debug\Content\Textures\block2.xnb</Output>
+      <Time>2014-04-16T22:00:38.4069515+06:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\Idle.png</Source>
+      <Name>Textures\Idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jerico\Documents\Visual Studio 2010\Projects\LevelGame_after2\LevelGame\bin\x86\Debug\Content\Textures\Idle.xnb</Output>
+      <Time>2014-04-16T22:00:38.4079515+06:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\Jump.png</Source>
+      <Name>Textures\Jump</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jerico\Documents\Visual Studio 2010\Projects\LevelGame_after2\LevelGame\bin\x86\Debug\Content\Textures\Jump.xnb</Output>
+      <Time>2008-12-09T16:25:50+06:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\Run.png</Source>
+      <Name>Textures\Run</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jerico\Documents\Visual Studio 2010\Projects\LevelGame_after2\LevelGame\bin\x86\Debug\Content\Textures\Run.xnb</Output>
+      <Time>2008-12-09T16:25:50+06:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\bricks.jpg</Source>
+      <Name>Textures\bricks</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jerico\Documents\Visual Studio 2010\Projects\LevelGame_after2\LevelGame\bin\x86\Debug\Content\Textures\bricks.xnb</Output>
+      <Time>2014-04-16T22:31:24.7515564+06:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\j.png</Source>
+      <Name>Textures\j</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jerico\Documents\Visual Studio 2010\Projects\LevelGame_after2\LevelGame\bin\x86\Debug\Content\Textures\j.xnb</Output>
+      <Time>2014-04-16T22:33:56.5282375+06:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\JamshutWorkers-Idle.png</Source>
+      <Name>Textures\JamshutWorkers-Idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jerico\Documents\Visual Studio 2010\Projects\LevelGame_after2\LevelGame\bin\x86\Debug\Content\Textures\JamshutWorkers-Idle.xnb</Output>
+      <Time>2014-04-16T22:33:56.5302376+06:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\digging.png</Source>
+      <Name>Textures\digging</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jerico\Documents\Visual Studio 2010\Projects\LevelGame_after2\LevelGame\bin\x86\Debug\Content\Textures\digging.xnb</Output>
+      <Time>2014-04-16T23:53:28.3711713+06:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\j-active.png</Source>
+      <Name>Textures\j-active</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jerico\Documents\Visual Studio 2010\Projects\LevelGame_after2\LevelGame\bin\x86\Debug\Content\Textures\j-active.xnb</Output>
+      <Time>2014-04-17T00:02:26.8489705+06:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\j-digging.png</Source>
+      <Name>Textures\j-digging</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jerico\Documents\Visual Studio 2010\Projects\LevelGame_after2\LevelGame\bin\x86\Debug\Content\Textures\j-digging.xnb</Output>
+      <Time>2014-04-17T00:02:26.8509706+06:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\j-Idle.png</Source>
+      <Name>Textures\j-Idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jerico\Documents\Visual Studio 2010\Projects\LevelGame_after2\LevelGame\bin\x86\Debug\Content\Textures\j-Idle.xnb</Output>
+      <Time>2014-04-17T00:02:26.8519706+06:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\j-digging-2.png</Source>
+      <Name>Textures\j-digging-2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jerico\Documents\Visual Studio 2010\Projects\LevelGame_after2\LevelGame\bin\x86\Debug\Content\Textures\j-digging-2.xnb</Output>
+      <Time>2014-04-17T00:19:04.2000157+06:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\j-jump.png</Source>
+      <Name>Textures\j-jump</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jerico\Documents\Visual Studio 2010\Projects\LevelGame_after2\LevelGame\bin\x86\Debug\Content\Textures\j-jump.xnb</Output>
+      <Time>2014-04-17T20:32:43.4543241+06:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>HiDef</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Users\Jerico\Documents\Visual Studio 2010\Projects\LevelGame_after2\LevelGame\Content\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Jerico\Documents\Visual Studio 2010\Projects\LevelGame_after2\LevelGame\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Jerico\Documents\Visual Studio 2010\Projects\LevelGame_after2\LevelGame\Content\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Jerico\Documents\Visual Studio 2010\Projects\LevelGame_after2\LevelGame\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2010-08-23T13:41:18+07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2010-08-23T13:41:18+07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2010-08-23T13:41:18+07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2010-08-23T13:41:18+07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2010-08-23T13:41:18+07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2010-08-23T13:41:18+07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2013-09-10T08:43:24.6938239+06:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>
