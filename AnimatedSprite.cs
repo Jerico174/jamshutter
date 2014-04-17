@@ -15,6 +15,7 @@ namespace LevelGame
         Texture2D dig;
         Texture2D jump;
 
+        bool isIntersectsTop;
         bool isJumping;
         bool isRunning;
         bool isSlowMode;
@@ -184,7 +185,7 @@ namespace LevelGame
             spriteBatch.Begin();
             if (isDigging)
             {
-                spriteBatch.Draw(dig, screenRect, r, Color.White,5/10, Vector2.Zero, effects, 0);
+                spriteBatch.Draw(dig, screenRect, r, Color.White, 0, Vector2.Zero, effects, 0);
             }
             else if (isJumping)
             {

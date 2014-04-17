@@ -59,7 +59,13 @@ namespace LevelGame
             foreach (Block block in blocks)
             {
                 if (block.rect.Intersects(rect))
+                {
+                    if (block.rect.Bottom > rect.Top)
+                    {
+                        block.rect.Location = new Point(block.rect.X, block.rect.Y+50);
+                    }
                     return true;
+                }
             }
             return false;
         }
