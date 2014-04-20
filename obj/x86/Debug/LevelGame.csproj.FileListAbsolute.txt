@@ -21,3 +21,5 @@ C:\Users\Jerico\Documents\Visual Studio 2010\Projects\LevelGame_after2\LevelGame
 C:\Users\Jerico\Documents\Visual Studio 2010\Projects\LevelGame_after2\LevelGame\bin\x86\Debug\Content\Textures\j-Idle.xnb
 C:\Users\Jerico\Documents\Visual Studio 2010\Projects\LevelGame_after2\LevelGame\bin\x86\Debug\Content\Textures\j-digging-2.xnb
 C:\Users\Jerico\Documents\Visual Studio 2010\Projects\LevelGame_after2\LevelGame\bin\x86\Debug\Content\Textures\j-jump.xnb
+C:\Users\Jerico\Documents\Visual Studio 2010\Projects\LevelGame_after2\LevelGame\bin\x86\Debug\Content\Textures\rock.xnb
+C:\Users\Jerico\Documents\Visual Studio 2010\Projects\LevelGame_after2\LevelGame\bin\x86\Debug\Content\Fonts\Hud.xnb

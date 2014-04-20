@@ -39,7 +39,11 @@ namespace LevelGame
         public List<int> blocksPlaces;  
         public string[] level;
 
+        private SpriteFont hudFont;
+        TimeSpan timeRemaining = TimeSpan.FromMinutes(0.25);
+
         static int ScrollX;
+        static int ScrollY;
         int levelLength;
 
         int currentLevel;
@@ -54,15 +58,67 @@ namespace LevelGame
             Height = graphics.PreferredBackBufferHeight = 400;
         }
 
+        private void DrawShadowedString(SpriteFont font, string value, Vector2 position, Color color)
+        {
+            spriteBatch.DrawString(font, value, position + new Vector2(1.0f, 1.0f), Color.Black);
+            spriteBatch.DrawString(font, value, position, color);
+        }
+        private void DrawHud()
+        {
+            Rectangle titleSafeArea = GraphicsDevice.Viewport.TitleSafeArea;
+            Vector2 hudLocation = new Vector2(titleSafeArea.X, titleSafeArea.Y);
+            Vector2 center = new Vector2(titleSafeArea.X + titleSafeArea.Width / 2.0f,
+                                         titleSafeArea.Y + titleSafeArea.Height / 2.0f);
+
+            // Draw time remaining. Uses modulo division to cause blinking when the
+            // player is running out of time.
+            string timeString = "TIME: " + timeRemaining.Minutes.ToString("00") + ":" + timeRemaining.Seconds.ToString("00");
+            Color timeColor = Color.Black;
+            DrawShadowedString(hudFont, timeString, hudLocation, timeColor);
+
+
+            // Determine the status overlay message to show.
+            Texture2D status = null;
+            if (timeRemaining == TimeSpan.Zero)
+            {
+                
+            }
+
+            if (status != null)
+            {
+                // Draw status message.
+                Vector2 statusSize = new Vector2(status.Width, status.Height);
+                spriteBatch.Draw(status, center - statusSize / 2, Color.White);
+            }
+        }
+
         public bool CollidesWithLevel(Rectangle rect)
         {
             foreach (Block block in blocks)
             {
                 if (block.rect.Intersects(rect))
                 {
-                    if (block.rect.Bottom > rect.Top)
+                    if (/*(block.rect.Height >= 0) &&*/ (hero.isDigging) && (block.texture == blockTexture1))
                     {
-                        block.rect.Location = new Point(block.rect.X, block.rect.Y+50);
+                       
+                        block.rect.Height = block.rect.Height-4;
+                        block.rect.Width = block.rect.Width - 4;
+                        block.rect.Location = new Point(block.rect.X + 2, block.rect.Y+2);
+                        if (block.rect.Height<=0)
+                        {
+                            block.rect.Location = new Point(-100, -100);
+                        }
+                    }
+                    else if ((hero.isDigging) && (block.texture == blockTexture2))
+                    {
+
+                        block.rect.Height = block.rect.Height - 2;
+                        block.rect.Width = block.rect.Width - 2;
+                        block.rect.Location = new Point(block.rect.X + 1, block.rect.Y + 1);
+                        if (block.rect.Height <= 0)
+                        {
+                            block.rect.Location = new Point(-100, -100);
+                        }
                     }
                     return true;
                 }
@@ -82,22 +138,22 @@ namespace LevelGame
             }
             
         }
-
         public static Rectangle GetScreenRect(Rectangle rect)
         {
             Rectangle screenRect = rect;
-            screenRect.Offset(-ScrollX, 0);
+            screenRect.Offset(-ScrollX, -ScrollY);
 
             return screenRect;
         }
-        public void Scroll(int dx)
+        public void Scroll(int dx, int dy)
         {
             if (ScrollX + dx >= 0 && ScrollX + dx <= levelLength - 400)
                 ScrollX += dx;
+            if (ScrollY + dy >= 0 && ScrollY + dy <= levelLength - 400)
+                ScrollY += dy;
         }
         public void CreateLevel()
         {
-            int idCounter = 0;
             currentLevel++;
             if (currentLevel > 3)
                 currentLevel = 1;
@@ -115,9 +171,7 @@ namespace LevelGame
                     Rectangle rect = new Rectangle(x, y, 40, 40);
                     if (c == 'X')
                     {
-                        Rectangle blockPlace = rect;
                         Block block = new Block(rect, blockTexture1);
-                        blocksPlaces.Add(idCounter);
                         blocks.Add(block);
                     }
                     if (c == 'Y')
@@ -126,7 +180,6 @@ namespace LevelGame
                         blocks.Add(block);
                     }
                     x += 40;
-                    idCounter++;
                 }
                 x = 0;
                 y += 40;
@@ -154,7 +207,9 @@ namespace LevelGame
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            blockTexture1 = Content.Load<Texture2D>("Textures/block");
+            hudFont = Content.Load<SpriteFont>("Fonts/Hud");
+
+            blockTexture1 = Content.Load<Texture2D>("Textures/rock");
             blockTexture2 = Content.Load<Texture2D>("Textures/bricks");
 
             jumpTexture = Content.Load<Texture2D>("Textures/j-jump");
@@ -188,6 +243,7 @@ namespace LevelGame
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
+            timeRemaining -= gameTime.ElapsedGameTime;
             // TODO: Add your update logic here
             KeyboardState keyState = Keyboard.GetState();
 
@@ -195,9 +251,11 @@ namespace LevelGame
                 CreateLevel();
             */
             if (keyState.IsKeyDown(Keys.Left))
-                hero.StartRun(false);
+                hero.StartRun(false,false);
             else if (keyState.IsKeyDown(Keys.Right))
-                hero.StartRun(true);
+                hero.StartRun(true,false);
+            else if (keyState.IsKeyDown(Keys.Down))
+                hero.StartRun(true, true);
             else hero.Stop();
 
             if (keyState.IsKeyDown(Keys.Up) && oldState.IsKeyUp(Keys.Up))
@@ -208,9 +266,13 @@ namespace LevelGame
             Rectangle heroScreenRect = GetScreenRect(hero.rect);
 
             if (heroScreenRect.Left < Width / 2)
-                Scroll(-3*gameTime.ElapsedGameTime.Milliseconds/10);
+                Scroll(-3*gameTime.ElapsedGameTime.Milliseconds/10,0);
             if (heroScreenRect.Left > Width / 2)
-                Scroll(3 * gameTime.ElapsedGameTime.Milliseconds / 10);
+                Scroll(3 * gameTime.ElapsedGameTime.Milliseconds / 10,0);
+            if (heroScreenRect.Bottom > Height / 2)
+                Scroll(0, 1 * gameTime.ElapsedGameTime.Milliseconds / 10);
+            if (heroScreenRect.Bottom < Height / 2)
+                Scroll(0, -1 * gameTime.ElapsedGameTime.Milliseconds / 10);
 
             oldState = keyState;
 
@@ -232,7 +294,10 @@ namespace LevelGame
             {
                 block.Draw(spriteBatch);
             }
+
+            DrawHud();
             spriteBatch.End();
+
 
             hero.Draw(spriteBatch);
 

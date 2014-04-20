@@ -10,7 +10,7 @@ namespace LevelGame
     class Block
     {
         public Rectangle rect;
-        Texture2D texture;
+        public Texture2D texture;
 
         public Block(Rectangle rect, Texture2D texture)
         {

@@ -26,7 +26,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Jerico\Documents\Visual Studio 2010\Projects\LevelGame_after2\LevelGame\bin\x86\Debug\Content\Textures\Idle.xnb</Output>
-      <Time>2014-04-16T22:00:38.4079515+06:00</Time>
+      <Time>2014-04-18T10:48:25.5422006+06:00</Time>
     </Item>
     <Item>
       <Source>Textures\Jump.png</Source>
@@ -126,6 +126,24 @@
       <Options>None</Options>
       <Output>C:\Users\Jerico\Documents\Visual Studio 2010\Projects\LevelGame_after2\LevelGame\bin\x86\Debug\Content\Textures\j-jump.xnb</Output>
       <Time>2014-04-17T20:32:43.4543241+06:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\rock.jpg</Source>
+      <Name>Textures\rock</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jerico\Documents\Visual Studio 2010\Projects\LevelGame_after2\LevelGame\bin\x86\Debug\Content\Textures\rock.xnb</Output>
+      <Time>2014-04-18T10:51:53.7091071+06:00</Time>
+    </Item>
+    <Item>
+      <Source>Fonts\Hud.spritefont</Source>
+      <Name>Fonts\Hud</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jerico\Documents\Visual Studio 2010\Projects\LevelGame_after2\LevelGame\bin\x86\Debug\Content\Fonts\Hud.xnb</Output>
+      <Time>2014-04-20T23:34:07.8121669+06:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

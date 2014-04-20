@@ -67,6 +67,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Fonts\Hud.spritefont">
+      <Name>Hud</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
     <None Include="Levels\level1.txt">
       <Name>level1</Name>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -174,6 +179,13 @@
   <ItemGroup>
     <Compile Include="Textures\j-jump.png">
       <Name>j-jump</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\rock.jpg">
+      <Name>rock</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

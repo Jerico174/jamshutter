@@ -15,12 +15,12 @@ namespace LevelGame
         Texture2D dig;
         Texture2D jump;
 
-        bool isIntersectsTop;
         bool isJumping;
         bool isRunning;
         bool isSlowMode;
         bool isRunningRight;
-        bool isDigging;
+        bool isRunnignDown;
+        public bool isDigging;
 
         float yVelocity;
         float maxYVelocity = 10;
@@ -61,7 +61,7 @@ namespace LevelGame
         {
             isSlowMode = !isSlowMode;
         }
-        public void StartRun(bool isRight)
+        public void StartRun(bool isRight,bool isDown)
         {
             if (!isRunning)
             {
@@ -70,6 +70,7 @@ namespace LevelGame
                 timeElapsed = 0;
             }
             isRunningRight = isRight;
+            isRunnignDown=isDown;
         }
         public void Stop()
         {
@@ -87,7 +88,7 @@ namespace LevelGame
             {
                 isDigging = false;
             }
-            isRunningRight = true;
+            //isRunningRight = true;
         }
         public void Jump()
         {
@@ -119,7 +120,6 @@ namespace LevelGame
                 yVelocity = 0;
                 isJumping = false;
             }
-
         }
         public void Update(GameTime gameTime)
         {
@@ -138,12 +138,12 @@ namespace LevelGame
             if (isRunning)
             {
                 int dx = 3 * gameTime.ElapsedGameTime.Milliseconds / 10;
+                int dy = 3 * gameTime.ElapsedGameTime.Milliseconds / 10;
                 if (!isRunningRight)
                     dx = -dx;
-
                 Rectangle nextPosition = rect;
-                nextPosition.Offset(dx, 0);
-
+                if (isRunnignDown) nextPosition.Offset(0, dy);
+                else nextPosition.Offset(dx, 0);
                 Rectangle boudingRect = GetBoundingRect(nextPosition);
                 Rectangle screenRect = Game1.GetScreenRect(boudingRect);
 
